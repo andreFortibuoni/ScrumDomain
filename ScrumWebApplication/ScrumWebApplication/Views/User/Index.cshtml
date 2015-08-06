@@ -1,0 +1,31 @@
+﻿@model List<ScrumWebApplication.Models.Item>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Utente (Scrum Domain)</h2>
+
+<h3>Lista degli ITEM:</h3>
+<table>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>
+                    Item ID: @i.Id
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Priority: @i.Priority
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Taken Over: @i.TakenOver
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
